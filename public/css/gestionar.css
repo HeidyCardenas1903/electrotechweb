@@ -1,0 +1,453 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #014972;
+  --primary-color-light: #039bf900;
+  --secondary-color: #fafafa;
+  --tertiary-color: #1d242b;
+  --fourth-color: #dde6ed;
+
+  --tran-03: all 0.2s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.4s ease;
+}
+
+/* Estilos para encabezados y otros elementos de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Estilos para párrafos, enlaces, etc. */
+p,
+a,
+li,
+td,
+input,
+label {
+  font-family: "Roboto";
+}
+
+body {
+  min-height: 100hv;
+  background: var(--secondary-color);
+  transition: var(--tran-05);
+}
+
+ul {
+  padding-left: 0;
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 230px;
+  padding: 10px 14px;
+  background: var(--primary-color);
+  transition: var(--tran-05);
+  z-index: 100;
+}
+
+.sidebar.close {
+  width: 88px;
+}
+
+.sidebar li {
+  display: flex;
+  height: 50px;
+  list-style: none;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sidebar header img,
+.sidebar .fa-solid {
+  min-width: 60px;
+  border-radius: 5px;
+}
+
+.sidebar .fa-solid {
+  display: flex;
+  min-width: 60px;
+  border-radius: 6px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .fa-solid {
+  color: var(--secondary-color);
+  transition: var(--tran-03);
+}
+
+.sidebar .text {
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowgrap;
+  opacity: 1;
+}
+
+.sidebar.close .text {
+  opacity: 0;
+}
+
+.sidebar header {
+  position: relative;
+}
+
+.sidebar header .toggle {
+  display: flex;
+  position: absolute;
+  top: 20%;
+  right: 0px;
+  height: 35px;
+  width: 35px;
+  color: var(--secondary-color);
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+.sidebar.close .toggle {
+  width: 100%;
+  top: 20%;
+}
+
+.sidebar .menu {
+  margin-top: 40px;
+}
+
+.sidebar li.search-box {
+  border-radius: 6px;
+  background: var(--primary-color-light);
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+.sidebar li.search-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: var(--secondary-color);
+  color: var(--tertiary-color);
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: var(--tran-05);
+}
+
+.sidebar li a {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  background: transparent;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--tran-03);
+}
+
+.sidebar li a:hover {
+  background: var(--secondary-color);
+}
+
+.sidebar li a:hover .fa-solid,
+.sidebar li a:hover .text {
+  color: var(--primary-color);
+}
+
+.sidebar .menu-bar {
+  display: flex;
+  height: calc(100% - 55px);
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .menu-bar .mode {
+  border-radius: 6px;
+  background: var(--primary-color-light);
+  position: relative;
+  transition: var(--tran-05);
+}
+
+.sidebar .user-info {
+  cursor: default;
+}
+
+.sidebar .user-info:hover {
+  background: none;
+}
+
+.sidebar .user-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CONTENIDO */
+.home {
+  position: relative;
+  top: 0;
+  left: 100px;
+  height: auto;
+  width: 90%;
+  background: var(--secondary-color);
+  transition: var(--tran-05);
+  padding: 10px;
+}
+
+div.row.header {
+  margin-bottom: 20px;
+  margin-top: 1%;
+}
+
+.buscar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1%;
+
+}
+
+#lucam{
+  width: 85%;
+}
+
+input#campobus1, input#campobus2, input#campobus3 {
+  all: unset;
+  border: 3px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 5px;
+  height: 18px;
+  width: 50%;
+}
+
+#btnbuscar {
+  all: unset;
+  text-align: center;
+  color: #fafafa;
+  background: var(--primary-color);
+  border-radius: 5px;
+  padding: 5px 8px;
+  width: 12%;
+  margin-left: 2%;
+}
+
+.home h3 {
+  margin-top: 1%;
+  color: var(--primary-color);
+}
+
+.home .nav-tabs {
+  border-bottom: 2px solid var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+.home .nav-item {
+  margin-right: 10px;
+}
+
+.home .nav-link {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.home .nav-link:hover {
+  color: var(--primary-color);
+  background-color: #fafafa;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.home .nav-link.active {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.home .tab-content {
+  margin-top: 20px;
+}
+
+.home .tab-pane p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #1d242b;
+}
+
+i.pestañitas {
+  margin-right: 8px;
+}
+
+/* Contenido de las pestañas */
+#content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table#users, table#clientes, table#proveedores {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  color: var(--tertiary-color);
+  border-radius: 5px;
+  overflow: auto;
+  max-height: 300px;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Establece un espacio vertical de 10px entre las filas */
+  width: 100%;
+}
+
+td.first{
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 6%;
+
+}
+
+td.last{
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 6%;
+}
+
+thead {
+  text-align: center;
+  height: 50px;
+  color: var(--secondary-color);
+  font-weight: 500;
+  background: var(--primary-color);
+}
+
+tbody {
+  background: var(--fourth-color);
+}
+
+tr {
+  height: 50px;
+}
+
+div#btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a#adduser, a#addProv {
+  width: 180px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  background: var(--primary-color);
+  display: block;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+a#genPDF, a#genPDFProv {
+  width: 180px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  background: var(--primary-color);
+  display: block;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+td.last.iconos {
+  margin: 10px 0;
+  color: var(--tertiary-color);
+  font-size: 22px;
+  align-items: end;
+  justify-content: space-evenly;
+}
+
+td.last.iconos a.linkicono {
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+td.last.iconos a.linkicono:hover {
+  color: var(--primary-color);
+}
+
+
+
+/* Modal */
+
+.modal-header{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.modal-header h1{
+  color: var(--secondary-color);
+}
+
+.modal-header i{
+  margin-right: 6px;
+}
+
+button.btn.btn-primary {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  border: none;
+}
+
+button.btn.btn-secondary {
+  border: none;
+  background: var(--tertiary-color);
+}
+
+i.lupa{
+  color: var(--primary-color);
+  font-size: 20px;
+  margin: 0 10px;
+}

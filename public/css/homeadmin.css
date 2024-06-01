@@ -1,0 +1,346 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #014972;
+  --primary-color-light: #039bf900;
+  --secondary-color: #fafafa;
+  --tertiary-color: #1d242b;
+  --fourth-color: #dde6ed;
+
+  --tran-03: all 0.2s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.4s ease;
+}
+
+/* Estilos para encabezados y otros elementos de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: var(--tertiary-color);
+}
+
+/* Estilos para párrafos, enlaces, etc. */
+p,
+a,
+li,
+td,
+input,
+label {
+  font-family: "Roboto";
+}
+
+body {
+  min-height: 100hv;
+  background: var(--secondary-color);
+  transition: var(--tran-05);
+}
+
+ul {
+  padding-left: 0;
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 230px;
+  padding: 10px 14px;
+  background: var(--primary-color);
+  transition: var(--tran-05);
+  z-index: 100;
+  backdrop-filter: blur(5000px);
+}
+
+.sidebar.close {
+  width: 88px;
+}
+
+.sidebar li {
+  display: flex;
+  height: 50px;
+  list-style: none;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sidebar header img,
+.sidebar .fa-solid {
+  min-width: 60px;
+  border-radius: 5px;
+}
+
+.sidebar .fa-solid {
+  display: flex;
+  min-width: 60px;
+  border-radius: 6px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .fa-solid {
+  color: var(--secondary-color);
+  transition: var(--tran-03);
+}
+
+.sidebar .text {
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowgrap;
+  opacity: 1;
+}
+
+.sidebar.close .text {
+  opacity: 0;
+}
+
+.sidebar header {
+  position: relative;
+}
+
+.sidebar header .toggle {
+  display: flex;
+  position: absolute;
+  top: 20%;
+  right: 0px;
+  height: 35px;
+  width: 35px;
+  color: var(--secondary-color);
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+.sidebar.close .toggle {
+  width: 100%;
+  top: 20%;
+}
+
+.sidebar .menu {
+  margin-top: 40px;
+}
+
+.sidebar li.search-box {
+  border-radius: 6px;
+  background: var(--primary-color-light);
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+.sidebar li.search-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: var(--secondary-color);
+  color: var(--tertiary-color);
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: var(--tran-05);
+}
+
+.sidebar li a {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  background: transparent;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--tran-03);
+}
+
+.sidebar li a:hover {
+  background: var(--secondary-color);
+}
+
+.sidebar li a:hover .fa-solid,
+.sidebar li a:hover .text {
+  color: var(--primary-color);
+}
+
+.sidebar .menu-bar {
+  display: flex;
+  height: calc(100% - 55px);
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .menu-bar .mode {
+  border-radius: 6px;
+  background: var(--primary-color-light);
+  position: relative;
+  transition: var(--tran-05);
+}
+
+.sidebar .user-info {
+  cursor: default;
+}
+
+.sidebar .user-info:hover {
+  background: none;
+}
+
+.sidebar .user-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home {
+  position: relative;
+  top: 0;
+  left: 100px;
+  height: auto;
+  width: 90%;
+  background: var(--secondary-color);
+  transition: background var(--transition-speed);
+  padding: 10px;
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  margin: 2% auto;
+}
+
+h2#pan {
+  margin-bottom: 2%;
+  color: var(--primary-color);
+}
+
+/* Paneles informativos */
+.panel {
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  padding: 3%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px 2px #e9ecef;
+  align-items: center;
+  transition: 0.5s;
+}
+.panel:hover {
+  transform: scale(1.1);
+}
+
+div.row.body{
+  margin-bottom: 5%;
+}
+
+.icono {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-right: 20%;
+  margin-left: 10%;
+}
+
+.textos {
+  flex: 1;
+}
+
+h3.subtitulo {
+  color: var(--primary-color);
+}
+
+.notifications {
+  background-color: var(--secondary-color);
+  box-shadow: 0px 0px 6px 2px #e9ecef;
+  border-radius: 5px;
+  padding: 3%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.notifications h3 {
+  color: var(--tertiary-color);
+  font-size: 18px;
+  margin: 4% 3%;
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications ul li#agotado {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #f19216;
+  border-radius: 3px;
+}
+.notifications ul li#nice {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #689dee;
+  border-radius: 3px;
+}
+.notifications ul li#cuidado {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #e9dd2e;
+  border-radius: 3px;
+}
+
+
+.notifications ul li:last-child {
+  margin-bottom: 0;
+}
+
+.notifications ul li:hover {
+  background-color: #dee2e6;
+}
+
+.info {
+  text-align: center;
+  background-color: var(--secondary-color);
+  box-shadow: 0px 0px 6px 2px #e9ecef;
+  border-radius: 5px;
+  padding: 5%;
+  margin-bottom: 20px;
+}
+
+.sop{
+  text-align: center;
+}
+
+.col-md-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  margin: 0 0 2%;
+}
+
+img.TOP {
+  margin-bottom: 4%;
+}

@@ -1,0 +1,107 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #014976; /* Principal */
+  --secondary-color: #fafafa; /* Este remplaza los blancos */
+  --tertiary-color: #1d242b; /* Letras que esten con fondo blanco */
+  --fourth-color: #dde6ed; /* filas de tablas */
+}
+
+/* Estilos para encabezados y otros elementos de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: var(--tertiary-color);
+}
+
+/* Estilos para párrafos, enlaces, etc. */
+p,
+a,
+li,
+td,
+input,
+label {
+  font-family: "Roboto";
+}
+
+/* Estilos */
+body {
+  background:var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-height: max-content;
+  max-width: 90vh;
+  background: var(--secondary-color);
+  padding: 3%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: start;
+  display: block;
+  margin: 0 auto;
+}
+
+.container img {
+  display: block;
+  max-width: 12%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+h2.mb-4 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.form-label {
+  color: var(--tertiary-color);
+}
+
+input#codigo,
+input#usuario,
+input#password,
+input#confirm_password {
+  border: none;
+  background: transparent;
+  border-radius: inherit;
+  border-bottom: 3px solid var(--primary-color);
+  outline: none;
+  transition: border-bottom 0.3s;
+}
+
+input#codigo:focus,
+input#usuario:focus,
+input#password:focus,
+input#confirm_password:focus {
+  border-bottom: 3px solid var(--primary-color);
+  box-shadow: none;
+}
+
+button.btn.btn-primary.save {
+    display: block;
+    margin: 0 auto;
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 500;
+    border: 2px solid var(--primary-color);
+    transition: 0.1s;
+}
+
+button.btn.btn-primary.save:hover{
+    color: var(--secondary-color);
+    background: var(--primary-color);
+}
+

@@ -1,0 +1,156 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #014976; /* Principal */
+  --secondary-color: #fafafa; /* Este remplaza los blancos */
+  --tertiary-color: #1d242b; /* Letras que esten con fondo blanco */
+  --fourth-color: #dde6ed; /* filas de tablas */
+}
+
+/* Estilos para encabezados y otros elementos de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: var(--tertiary-color);
+}
+
+/* Estilos para párrafos, enlaces, etc. */
+p,
+a,
+li,
+td,
+input,
+label {
+  font-family: "Roboto";
+}
+
+body {
+  background: var(--secondary-color);
+}
+
+section {
+  display: flex;
+}
+
+/* Lado derecho */
+.col-md-6.rigth {
+  display: flex;
+  padding: 0 0 20px 20px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+p.saludo {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Lado izquierdo */
+.col-md-6.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img#logo {
+  max-width: 100%;
+  width: 150px;
+  margin: 10px auto;
+}
+
+h1 {
+  margin: 0 0 5% 0;
+  color: var(--primary-color);
+}
+
+/* Estilos para los inputs */
+input[type="text"], input#password{
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--tertiary-color);
+  border-radius: inherit;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+}
+input#password{
+  margin:0;
+}
+span.input-group-text{
+  position: absolute;
+  top:25%;
+  right:5%;
+  padding: 0;
+  border: none;
+}
+
+input[type="text"]:focus, input#password:focus{
+  box-shadow: 0 4px 4px rgba(77, 148, 241, 0.39);
+  background: transparent;
+}
+
+.row.user,
+.row.pass {
+  display: flex;
+  padding: 0px;
+  align-items: center;
+  align-content: flex-start;
+}
+
+i.fa-solid.fa-user-tie,
+i.fa-solid.fa-lock {
+  font-size: 20px;
+  padding: 0;
+}
+
+p.olvcontra {
+  font-size: 12px;
+  margin: 5% 0 15%;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+button:hover{
+  border: 2px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+a{
+  color: var(--primary-color);
+}
+
+a.init {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 12% 0 0 0;
+  font-weight: bold;
+}
